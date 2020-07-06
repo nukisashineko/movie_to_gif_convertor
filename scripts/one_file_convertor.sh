@@ -1,4 +1,6 @@
-TARGET_MOV=sample_console_echo.mp4
+if [ -z ${TARGET_MOV+x} ]; then
+    TARGET_MOV=test.mp4
+fi
 TARGET_SOURCE_PATH=movies/src/${TARGET_MOV}
 TARGET_DIST_PATH=movies/dist/${TARGET_MOV}.gif
 TARGET_TMP_DIR=tmp/${TARGET_MOV}_dir
