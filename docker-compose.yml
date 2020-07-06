@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  runner:
+    build: .
+    volumes:
+      - .:/app
+      - ./policy.xml:/etc/ImageMagick-6/policy.xml
+    working_dir: /app
+    command: bash /app/scripts/one_file_convertor.sh
